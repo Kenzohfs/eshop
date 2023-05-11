@@ -89,6 +89,7 @@ public class ClienteController {
         if (clienteDTO.getCartao() != null) {
             cliente.setCartao(cartaoCreditoService.findById(clienteDTO.getCartao().getId()).get());
         }
+
         cliente.setId(id);
 
         return ResponseEntity.ok(clienteService.save(cliente));
